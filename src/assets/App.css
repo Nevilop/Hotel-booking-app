@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-medium text-3xl text-white tracking-wider breakpoint-md:text-[2.625rem] breakpoint-lg:text-5xl breakpoint-xl:text-7xl;
+  }
+
+  p {
+    @apply font-normal;
+  }
+
+  a {
+    @apply text-base font-medium;
+  }
+
+  button {
+    @apply text-base font-semibold;
+  }
+
+  input[type="date"],
+  select {
+    @apply block;
+  }
+
+  label {
+    @apply font-medium text-dark;
+  }
+
+  input {
+    @apply text-dark/70;
+  }
+}
+
+@layer components {
+  .ham-menu {
+    @apply w-[1.875rem] h-6 fixed top-5 right-4 z-30;
+  }
+
+  .ham-top,
+  .ham-middle,
+  .ham-bottom {
+    @apply w-full h-[3px] bg-dark block;
+  }
+
+  .ham-middle {
+    @apply my-[5px];
+  }
+
+  .custom-divider {
+    @apply before:content-[""] before:block before:h-[1px] before:w-full before:bg-dark before:mr-4
+    after:content-[""] after:block after:h-[1px] after:w-full after:bg-dark after:ml-4;
+  }
+}
+
+.custom-overlay {
+  box-shadow: inset 0 0 0 2000px hsl(211, 100%, 50%, 0.3);
+}
